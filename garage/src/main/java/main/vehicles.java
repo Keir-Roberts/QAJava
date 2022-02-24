@@ -5,10 +5,10 @@ private String manufacturer;
 private String make;
 private String fuelType;
 private int maxSpeed;
+private String manMake;
 
-@Override
-public String toString() {
-	return manufacturer + " " + make;
+public String getManMake() {
+	return manMake;
 }
 public String getManufacturer() {
 	return manufacturer;
@@ -34,11 +34,11 @@ public int getMaxSpeed() {
 public void setMaxSpeed(int maxSpeed) {
 	this.maxSpeed = maxSpeed;
 }
-public void garageStore() {
-	main.garage.inGarage.add(this);
+public void garageStore(Object store) {
+	((garage) store).inGarage.add(this);
 }
-public void garageRemove() {
-	main.garage.inGarage.remove(garage.inGarage.indexOf(this));
+public void garageRemove(Object remove) {
+	((garage) remove).inGarage.remove(((garage) remove).inGarage.indexOf(this));
 }
 public vehicles(String manufacturer, String make, String fuelType, int maxSpeed) {
 	super();
@@ -46,6 +46,7 @@ public vehicles(String manufacturer, String make, String fuelType, int maxSpeed)
 	this.make = make;
 	this.fuelType = fuelType;
 	this.maxSpeed = maxSpeed;
+	this.manMake = manufacturer + " " + make;
 }
 	
 

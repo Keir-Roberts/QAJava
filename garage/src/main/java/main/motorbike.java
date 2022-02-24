@@ -37,4 +37,10 @@ public class motorbike extends vehicles {
 		this.turboCharge = turboCharge;
 	}
 
+	@Override
+	public String toString() {
+		return "motorbike " + getManufacturer() + " " + getMake() + " [Mileage =" + getMileage() + ", Function =" + getFunction() + ", Turbocharge?="
+				+ isTurboCharge() + ", Fuel Type()=" + getFuelType() + ", Max Speed()=" + getMaxSpeed() + "]";
+	}
+
 }

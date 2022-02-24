@@ -11,7 +11,6 @@ public static void main(String[] args) {
 	personList.addPeople(David);
 	Person Ellouise = new Person("Ellouise", 19, "Egg Enthusiast");
 	personList.addPeople(Ellouise);
-	System.out.println(personList.findPeople("David"));
-	System.out.println(personList.people);
+	menu.doMenu();
 }
 }

@@ -29,5 +29,11 @@ public helicopter(String manufacturer, String make, String fuelType, int maxSpee
 	this.seats = seats;
 	this.sound = sound;
 }
+@Override
+public String toString() {
+	return "helicopter " + getMake() + " " + getManufacturer() + " [ Max Altitude = " + getMaxAltitude() + ", seats = " + getSeats() + ", sound = " + getSound() + 
+		  ", Fuel type = " + getFuelType() + ", Max speed = "
+			+ getMaxSpeed() + "]";
+}
 
 }

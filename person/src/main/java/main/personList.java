@@ -9,7 +9,7 @@ public static void addPeople(Object person) {
 public static Object findPeople(String name) {
 	int x = 0;
 	for (Object person : people) {
-		if(((main.Person) person).getName() == name) {
+		if(((main.Person) person).getName().equals(name)) {
 			break;
 		} else { x++;
 	} 

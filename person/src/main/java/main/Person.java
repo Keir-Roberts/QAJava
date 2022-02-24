@@ -24,7 +24,7 @@ public void setJob_title(String job_title) {
 }
 @Override
 public String toString() {
-	return "Name = " + name + ", Age = " + age + ", Job Title = " + job_title;
+	return "[Name = " + name + ", Age = " + age + ", Job Title = " + job_title + "]";
 }
 public Person(String name, int age, String job_title) {
 	super();
