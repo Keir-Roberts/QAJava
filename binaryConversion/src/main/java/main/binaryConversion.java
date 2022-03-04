@@ -1,7 +1,9 @@
 package main;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.Scanner;
 public class binaryConversion {
+	public static Logger LOGGER = LogManager.getLogger();
 	public static int inIntBinary(String input) {
 		if (input.equals(String.valueOf(Integer.parseInt(input)))) {
 			if (Integer.parseInt(input) == 0) {
@@ -67,9 +69,10 @@ public class binaryConversion {
 public static void main(String[] args) {
 	@SuppressWarnings("resource")
 	Scanner scan = new Scanner(System.in);
-	System.out.println("Input a number");
+	LOGGER.info("Input a number.");
 	String input = scan.nextLine();
-	System.out.println(outDecBinary(input));
+	LOGGER.debug("User input: " + input);
+	LOGGER.info(outDecBinary(input));
 	
 }
 }

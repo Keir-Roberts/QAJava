@@ -1,7 +1,7 @@
 package classes;
 
 public class Customer {
-	private int ID;
+	private int ID = 0;
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -43,9 +43,8 @@ public class Customer {
 	public void setHouse(String house) {
 		this.house = house;
 	}
-	public Customer(int iD, String firstName, String lastName, String email, String postcode, String house) {
+	public Customer(String firstName, String lastName, String email, String postcode, String house) {
 		super();
-		ID = iD;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -54,7 +53,10 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "Customer ID:" + ID + ", Name=" + firstName + lastName;
+		return "Customer ID:" + ID + ", Name=" + firstName + " " + lastName;
 	}
-
+public String toStringLong() {
+	return "Customer ID:" + ID + ", Name=" + firstName + " " + lastName 
+			+ ", Email: " + email + ", Postcode: " + postcode + ", House: " + house;
+}
 }
